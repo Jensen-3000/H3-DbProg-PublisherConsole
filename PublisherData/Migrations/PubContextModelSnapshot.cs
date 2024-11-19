@@ -34,7 +34,7 @@ namespace PublisherData.Migrations
 
                     b.HasIndex("CoversCoverId");
 
-                    b.ToTable("ArtistCover");
+                    b.ToTable("ArtistCover", (string)null);
                 });
 
             modelBuilder.Entity("PublisherDomain.Artist", b =>
@@ -55,7 +55,7 @@ namespace PublisherData.Migrations
 
                     b.HasKey("ArtistId");
 
-                    b.ToTable("Artists");
+                    b.ToTable("Artists", (string)null);
                 });
 
             modelBuilder.Entity("PublisherDomain.Author", b =>
@@ -76,7 +76,7 @@ namespace PublisherData.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Authors", (string)null);
                 });
 
             modelBuilder.Entity("PublisherDomain.Book", b =>
@@ -110,7 +110,7 @@ namespace PublisherData.Migrations
                     b.HasIndex("CoverId")
                         .IsUnique();
 
-                    b.ToTable("Books");
+                    b.ToTable("Books", (string)null);
                 });
 
             modelBuilder.Entity("PublisherDomain.Cover", b =>
@@ -130,7 +130,7 @@ namespace PublisherData.Migrations
 
                     b.HasKey("CoverId");
 
-                    b.ToTable("Covers");
+                    b.ToTable("Covers", (string)null);
                 });
 
             modelBuilder.Entity("ArtistCover", b =>
