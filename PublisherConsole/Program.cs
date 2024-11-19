@@ -3,10 +3,32 @@ using PublisherData;
 using PublisherDomain;
 
 
-GetAuthors();
-AddAuthor();
-GetAuthors();
+//GetAuthors();
+//AddAuthor();
+//GetAuthors();
 
+
+void DeleteAuthorFind()
+{
+    using var context = new PubContext();
+    var author = context.Authors.Find(1);
+    if (author is not null)
+    {
+        context.Authors.Remove(author);
+        context.SaveChanges();
+    }
+}
+
+void DeleteAuthorFirstOrDefault()
+{
+    using var context = new PubContext();
+    var author = context.Authors.FirstOrDefault(a => a.Id == 1);
+    if (author is not null)
+    {
+        context.Authors.Remove(author);
+        context.SaveChanges();
+    }
+}
 
 void AddAuthor()
 {
