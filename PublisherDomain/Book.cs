@@ -9,5 +9,5 @@ public class Book
     public Author Author { get; set; }
     public int AuthorId { get; set; }
     public Cover Cover { get; set; }
-    public int CoverId { get; set; }
+    public int? CoverId { get; set; }
 }

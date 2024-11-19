@@ -7,6 +7,8 @@ using PublisherDomain;
 //AddAuthor();
 //GetAuthors();
 
+AddAuthorWithBook();
+
 
 void DeleteAuthorFind()
 {
